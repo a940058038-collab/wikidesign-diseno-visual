@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="WikiDesign – Diseño Visual: del caos al orden. Principios de jerarquía, color, tipografía y espacio en blanco.">
+  <title>Diseño Visual | WikiDesign</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="inicio">
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <a href="#inicio" class="logo" aria-label="WikiDesign, ir al inicio">
+      <img src="assets/img/logo-header.webp" alt="WikiDesign" class="logo-img" width="480" height="97">
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul class="main-nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#" class="soon">Colabora</a></li>
+        <li><a href="#" class="soon">Acerca de nosotros</a></li>
+      </ul>
+    </nav>
+
+    <form class="search-box" role="search" onsubmit="return false">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="14" cy="9.5" r="6.5"/><path d="M9.4 14.2 3 21"/>
+      </svg>
+      <input type="search" aria-label="Buscar en la wiki">
+    </form>
+  </header>
+
+  <div class="page-wrapper">
+
+    <aside class="sidebar" aria-label="Navegación de temas">
+      <div class="sidebar-section sidebar-temas">
+        <div class="sidebar-title">
+          <h2>Temas</h2>
+          <button type="button" class="toggle" aria-label="Contraer temas" aria-expanded="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V4M5 11l7-7 7 7"/></svg>
+          </button>
+        </div>
+        <ul class="sidebar-nav">
+          <li><a href="#" class="soon"><img class="icon" src="assets/icons/usuario.svg" alt="">Experiencia de Usuario – P1</a></li>
+          <li><a href="#" class="soon"><img class="icon" src="assets/icons/web.svg" alt="">Diseño Web</a></li>
+          <li><a href="#" class="soon"><img class="icon" src="assets/icons/thinking.svg" alt="">Design Thinking</a></li>
+          <li><a href="#" class="soon"><img class="icon" src="assets/icons/centrado.svg" alt="">Diseño Centrado en el Usuario</a></li>
+          <li><a href="#" class="soon"><img class="icon" src="assets/icons/interaccion.svg" alt="">Diseño de Interacción</a></li>
+          <li><a href="#" class="soon"><img class="icon" src="assets/icons/arquitectura.svg" alt="">Arquitectura de la Información</a></li>
+          <li><a href="#" class="soon"><img class="icon" src="assets/icons/navegacion.svg" alt="">Diseño de Navegación</a></li>
+          <li><a href="#inicio" class="active" aria-current="page"><img class="icon" src="assets/icons/visual.svg" alt="">Diseño Visual</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section sidebar-sumario">
+        <div class="sidebar-title">
+          <div>
+            <h2>Sumario</h2>
+            <p class="sidebar-sub">Diseño Visual</p>
+          </div>
+          <button type="button" class="toggle" aria-label="Contraer sumario" aria-expanded="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V4M5 11l7-7 7 7"/></svg>
+          </button>
+        </div>
+        <ul class="sumario-list">
+          <li><a href="#apertura">Caos vs Orden</a></li>
+          <li><a href="#sabias">1. ¿Sabías que…?</a></li>
+          <li><a href="#principios">2. Principios</a></li>
+          <li><a href="#jerarquia">3. Jerarquía visual</a></li>
+          <li><a href="#recursos">4. Videos</a></li>
+          <li><a href="#quizzes">5. Quizzes</a></li>
+          <li><a href="#recuerda">6. ¡Recuerda!</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content" id="contenido" tabindex="-1">
+      <h1 class="page-title">Diseño Visual</h1>
+
+      <section id="apertura" class="topic" aria-label="Comparativa Caos versus Orden visual">
+        <div class="row row--single">
+          <div class="card">
+            <p><strong>Del caos al orden:</strong> el lenguaje estratégico de la forma, el color y el espacio.</p>
+            <p>Pantalla dividida de apertura: <strong>Caos</strong> (izquierda) vs <strong>Orden</strong> (derecha). Mismo producto, distinta estructura.</p>
+            <p><em>El buen diseño es invisible porque funciona tan bien que el usuario solo consume el mensaje.</em></p>
+          </div>
+          <figure class="frame" tabindex="0" role="button" aria-label="Ampliar imagen">
+            <img src="assets/img/hero-caos-orden.webp" width="1920" height="712" fetchpriority="high" decoding="async"
+                 alt="Comparativa visual: a la izquierda un anuncio saturado con elementos desordenados (MEGA SALE, 70% OFF, HURRY, LIMITED, BUY, SHOP NOW, BEST DEAL); a la derecha un diseño limpio del producto LUMINA con jerarquía clara y botón SHOP NOW.">
+          </figure>
+        </div>
+      </section>
+
+      <section id="sabias" class="topic">
+        <h2 class="sub-title">1. ¿Sabías que…?</h2>
+        <div class="row row--full">
+          <div class="card">
+            <p>
+              El Diseño Visual no es mera decoración, sino un <strong>lenguaje estratégico y funcional</strong>
+              que organiza forma, color, tipografía y espacio para transmitir un mensaje de manera intencional.
+              El objetivo es llevar al usuario de “el diseño se ve bonito” a “el diseño se ve así porque funciona así”.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="principios" class="topic">
+        <h2 class="sub-title">2. Principios de Diseño Visual</h2>
+        <div class="row row--full">
+          <div class="card">
+            <p>
+              Estos cinco principios guían la construcción de cualquier interfaz o pieza gráfica.
+              Cada uno responde a una pregunta concreta: ¿qué se ve primero?, ¿dónde respira el ojo?,
+              ¿cómo se controla la mirada?, ¿qué comunica el color?, ¿qué tipografía sostiene el mensaje?
+            </p>
+            <ul class="principles">
+              <li><strong>Jerarquía:</strong> orden de importancia visual: titular → imagen → CTA → texto de apoyo.</li>
+              <li><strong>Espacio en blanco:</strong> el “respiro” que evita la saturación y mejora la legibilidad.</li>
+              <li><strong>Control de la mirada:</strong> líneas, contraste y alineación que dirigen el recorrido del ojo.</li>
+              <li><strong>Color:</strong> contraste, significado emocional y énfasis estratégico.</li>
+              <li><strong>Tipografía:</strong> familias, pesos y tamaños que construyen la jerarquía textual.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="jerarquia" class="topic">
+        <h2 class="sub-title">3. Jerarquía Visual en Acción</h2>
+        <div class="row row--double">
+          <div class="card">
+            <p>
+              La jerarquía visual organiza los elementos de mayor a menor importancia.
+              Un recorrido típico guiado por el ojo es:
+            </p>
+            <ol class="steps">
+              <li><strong>Titular</strong> – captura la atención inmediata.</li>
+              <li><strong>Imagen / producto</strong> – refuerza el mensaje.</li>
+              <li><strong>CTA (Call to Action)</strong> – invita a la acción.</li>
+              <li><strong>Texto de apoyo</strong> – aporta detalle sin competir.</li>
+            </ol>
+            <p class="quote">El buen diseño no embellece: organiza, guía y comunica con intención.</p>
+          </div>
+          <figure class="frame" tabindex="0" role="button" aria-label="Ampliar imagen">
+            <img src="assets/img/principios-iconos.webp" width="1920" height="591" loading="lazy" decoding="async"
+                 alt="Tres iconos de principios: Jerarquía (árbol de nodos), Espacio en blanco (marco con etiqueta Espacio) y Control de la mirada (ojo).">
+          </figure>
+          <figure class="frame" tabindex="0" role="button" aria-label="Ampliar imagen">
+            <img src="assets/img/niveles-jerarquia.webp" width="1920" height="1156" loading="lazy" decoding="async"
+                 alt="Niveles de jerarquía visual: Nivel 1 Titular principal, Nivel 2 Subtítulo/mensaje clave, Nivel 3 Texto de apoyo, Nivel 4 Detalles / enlaces, Nivel 5 Notas menores.">
+          </figure>
+        </div>
+      </section>
+
+      <section id="recursos" class="topic">
+        <h2 class="sub-title">4. Videos: Principios y Jerarquías del Diseño Visual</h2>
+        <div class="row row--full">
+          <div class="card">
+            <p>
+              Estos videos explican de forma clara los principios del diseño visual y cómo se aplica la jerarquía
+              para guiar la mirada del usuario. Ideal para reforzar lo visto en las secciones anteriores.
+            </p>
+            <div class="video-grid">
+              <div class="video-card">
+                <div class="video-embed" data-video="yNDgFK2Jj1E" data-title="Principios del Diseño Visual (Google UX)">
+                  <button type="button" class="video-play" aria-label="Reproducir video: Principios del Diseño Visual (Google UX)">
+                    <img src="https://i.ytimg.com/vi/yNDgFK2Jj1E/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" onerror="this.remove()">
+                    <span class="play-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <h3>Principios del Diseño Visual</h3>
+                <p>Énfasis, jerarquía, escala, unidad y variedad. Curso de Google UX Design.</p>
+                <a class="video-link" href="https://www.youtube.com/watch?v=yNDgFK2Jj1E" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
+              </div>
+              <div class="video-card">
+                <div class="video-embed" data-video="0O7wh92y32Y" data-title="Jerarquía en el diseño (Canva)">
+                  <button type="button" class="video-play" aria-label="Reproducir video: Jerarquía en el diseño (Canva)">
+                    <img src="https://i.ytimg.com/vi/0O7wh92y32Y/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" onerror="this.remove()">
+                    <span class="play-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <h3>Jerarquía en el diseño (Canva)</h3>
+                <p>El principio más importante: cómo priorizar elementos y guiar la mirada del usuario.</p>
+                <a class="video-link" href="https://www.youtube.com/watch?v=0O7wh92y32Y" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
+              </div>
+              <div class="video-card">
+                <div class="video-embed" data-video="RlTZ98UXldw" data-title="Jerarquía – Principio de diseño gráfico">
+                  <button type="button" class="video-play" aria-label="Reproducir video: Jerarquía – Principio de diseño gráfico">
+                    <img src="https://i.ytimg.com/vi/RlTZ98UXldw/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" onerror="this.remove()">
+                    <span class="play-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+                <h3>Jerarquía – Principio de diseño gráfico</h3>
+                <p>Control de la información visual: escala, color, contraste y espacio.</p>
+                <a class="video-link" href="https://www.youtube.com/watch?v=RlTZ98UXldw" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quizzes" class="topic">
+        <h2 class="sub-title">5. Quizzes Cortos</h2>
+        <div class="row row--full">
+          <div class="card">
+            <p>Pon a prueba lo que aprendiste. Selecciona la respuesta y recibe feedback inmediato.</p>
+
+            <div class="quiz" data-quiz="1">
+              <h3 class="quiz-question">1. ¿Qué elemento suele captar primero la atención en una jerarquía visual bien diseñada?</h3>
+              <div class="quiz-options">
+                <button type="button" class="quiz-opt" data-correct="false">El texto de apoyo al final de la página</button>
+                <button type="button" class="quiz-opt" data-correct="true">El titular principal (más grande y contrastado)</button>
+                <button type="button" class="quiz-opt" data-correct="false">Los enlaces del pie de página</button>
+              </div>
+              <p class="quiz-feedback" hidden></p>
+            </div>
+
+            <div class="quiz" data-quiz="2">
+              <h3 class="quiz-question">2. ¿Cuál es el principal beneficio del espacio en blanco?</h3>
+              <div class="quiz-options">
+                <button type="button" class="quiz-opt" data-correct="false">Llenar la pantalla para que no se vea vacía</button>
+                <button type="button" class="quiz-opt" data-correct="true">Reducir la saturación y mejorar la legibilidad</button>
+                <button type="button" class="quiz-opt" data-correct="false">Aumentar el peso del archivo de la imagen</button>
+              </div>
+              <p class="quiz-feedback" hidden></p>
+            </div>
+
+            <div class="quiz" data-quiz="3">
+              <h3 class="quiz-question">3. En la comparativa Caos vs Orden, ¿qué hace que el lado “Orden” se entienda más rápido?</h3>
+              <div class="quiz-options">
+                <button type="button" class="quiz-opt" data-correct="false">Usar más colores brillantes y textos en mayúsculas</button>
+                <button type="button" class="quiz-opt" data-correct="true">Una estructura clara: titular → imagen → CTA, con espacio y contraste</button>
+                <button type="button" class="quiz-opt" data-correct="false">Colocar todos los botones del mismo tamaño y color</button>
+              </div>
+              <p class="quiz-feedback" hidden></p>
+            </div>
+
+            <div class="quiz" data-quiz="4">
+              <h3 class="quiz-question">4. ¿Qué principio dirige el recorrido de la mirada del usuario?</h3>
+              <div class="quiz-options">
+                <button type="button" class="quiz-opt" data-correct="true">Control de la mirada (contraste, alineación y líneas visuales)</button>
+                <button type="button" class="quiz-opt" data-correct="false">Usar la mayor cantidad posible de tipografías distintas</button>
+                <button type="button" class="quiz-opt" data-correct="false">Ocultar el botón de acción principal</button>
+              </div>
+              <p class="quiz-feedback" hidden></p>
+            </div>
+
+            <div class="quiz-summary" hidden>
+              <p class="quiz-score" role="status"></p>
+              <button type="button" class="btn-cta btn-reset">Reiniciar quizzes</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recuerda" class="topic">
+        <h2 class="sub-title">6. ¡Recuerda!</h2>
+        <div class="row row--single">
+          <div class="card">
+            <p class="quote">El buen diseño no embellece: organiza, guía y comunica con intención.</p>
+            <p>Espacio en blanco: saturación vs. respiro visual = claridad.</p>
+          </div>
+          <figure class="frame" tabindex="0" role="button" aria-label="Ampliar imagen">
+            <img src="assets/img/espacio-blanco.webp" width="1920" height="781" loading="lazy" decoding="async"
+                 alt="Comparativa de espacio en blanco: a la izquierda saturación con muchos elementos apilados; a la derecha respiro visual con elemento principal, secundario y claridad.">
+          </figure>
+        </div>
+        <div class="topic-end">
+          <a href="#inicio" class="btn-cta">↑ Volver al inicio del tema</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo" aria-label="Wiki Design">
+        <span>Wiki</span><span>Design</span>
+        <svg viewBox="0 0 30 30" aria-hidden="true"><g stroke="#D9D9D9" stroke-width="2.6" stroke-linecap="round"><path d="M7 4l4 6"/><path d="M14 2l3 7"/><path d="M22 7l-4 5"/></g></svg>
+      </div>
+      <div class="footer-text">
+        <p>© 2026 Wiki Design. Todos los derechos reservados.</p>
+        <p>El contenido de este sitio ha sido desarrollado con fines educativos y académicos. Los textos, imágenes y recursos utilizados pertenecen a sus respectivos autores y se emplean únicamente como material de consulta y aprendizaje.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#inicio" class="to-top" aria-label="Volver arriba" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V4M5 11l7-7 7 7"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
