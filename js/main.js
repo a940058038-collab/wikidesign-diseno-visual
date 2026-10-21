@@ -57,6 +57,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const temaItems = [...document.querySelectorAll('.tema-item')];
+  function closeTemas(except) {
+    temaItems.forEach(item => {
+      if (item === except) return;
+      item.classList.remove('abierto');
+      item.querySelector('.tema-boton').setAttribute('aria-expanded', 'false');
+    });
+  }
+  temaItems.forEach(item => {
+    const btn = item.querySelector('.tema-boton');
+    btn.addEventListener('click', () => {
+      const open = item.classList.toggle('abierto');
+      btn.setAttribute('aria-expanded', String(open));
+      closeTemas(item);
+    });
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.tema-item')) closeTemas(null);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeTemas(null);
+  });
+
   const sumarioLinks = document.querySelectorAll('.sumario-list a');
   const sections = [...sumarioLinks]
     .map(a => document.querySelector(a.getAttribute('href')))
@@ -169,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
       embed.innerHTML =
         '<div class="video-notice">' +
         '<p>YouTube no permite reproducir videos incrustados cuando la página se abre como archivo local (error 153).</p>' +
-        '<p>Abre el sitio desde su dirección web (<strong>https://</strong>) para verlo aquí.</p>' +
+        '<p>Abre el sitio con <strong>abrir-sitio</strong> o súbelo a un hosting para verlos aquí.</p>' +
         '<a class="btn-cta" href="https://www.youtube.com/watch?v=' + id + '" target="_blank" rel="noopener noreferrer">Ver en YouTube ↗</a>' +
         '</div>';
       return;

@@ -118,6 +118,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; }
 }
 .sidebar.temas-collapsed .sidebar-sumario { margin-top: -3.4rem; padding-top: 3rem; }
 .sidebar-section.collapsed ul { display: none; }
+.sidebar-section.collapsed .sidebar-nav { display: none; }
 
 .sidebar-title {
   display: flex;
@@ -152,27 +153,42 @@ button { font: inherit; cursor: pointer; border: 0; background: none; }
 .toggle svg { width: 1.7rem; height: 1.7rem; }
 .toggle[aria-expanded="false"] { transform: rotate(180deg); }
 
-.sidebar-nav { margin: 2.2rem 0 0 1.1rem; }
-.sidebar-nav li { margin-bottom: .4rem; }
-.sidebar-nav a {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  font-weight: 700;
-  font-size: max(.78rem, 8px);
-  letter-spacing: -.01em;
-  line-height: 1.1;
-  text-transform: uppercase;
-  color: var(--olive);
-  padding-right: .3rem;
-  min-height: 2rem;
+.sidebar { z-index: 95; }
+.sidebar-temas { overflow: visible; padding-bottom: 2.6rem; }
+.sidebar-nav { margin: 2.2rem 0 0 1.1rem; list-style: none; padding: 0; }
+.sidebar-nav .tema-item { position: relative; margin-bottom: .9rem; }
+.tema-boton {
+  display: flex; align-items: center; gap: .55rem;
+  position: relative; width: 100%; padding: 0 1.8rem 0 0; border: 0; background: none;
+  cursor: pointer; text-align: left;
+  color: var(--card-bg);
+  font-family: var(--font-body);
+  font-size: max(1.3rem, 11px); line-height: 1.35;
 }
-.sidebar-nav .icon { width: 1.7rem; height: 1.7rem; flex: none; margin-right: .6rem; opacity: .9; }
-.sidebar-nav a:hover { color: #fff; }
-.sidebar-nav a.active { text-decoration: underline; text-underline-offset: .2rem; }
-.sidebar-nav li:nth-child(4) a,
-.sidebar-nav li:nth-child(6) a { min-height: 2.6rem; padding-right: 3.4rem; }
-.sidebar-nav li:nth-child(6) { margin-bottom: 1.1rem; }
+.tema-boton::after {
+  content: "\25B8"; position: absolute; right: .35rem; top: 50%; transform: translateY(-50%);
+  font-size: max(.85rem, 8px); color: var(--card-bg);
+}
+.tema-boton:hover span, .tema-item.abierto .tema-boton span { text-decoration: underline; }
+.tema-activo .tema-boton span { font-weight: 700; text-decoration: underline; text-underline-offset: .2rem; }
+.icono-tema { width: 2rem; height: 2rem; flex: 0 0 2rem; object-fit: contain; }
+.parejas {
+  position: absolute; left: 100%; top: -1rem; z-index: 50;
+  min-width: 25rem; max-width: 30rem; margin: 0 0 0 .6rem; padding: 1rem .6rem; list-style: none;
+  background: var(--navy-mid); border: 1px solid var(--purple); border-radius: 0 1.6rem 1.6rem 1.6rem;
+  box-shadow: .6rem .8rem 2.4rem rgba(0,0,0,.45);
+  display: none;
+}
+.parejas::before { content: ""; position: absolute; left: -.8rem; top: 0; width: .8rem; height: 100%; }
+.tema-item:hover .parejas, .tema-item:focus-within .parejas, .tema-item.abierto .parejas { display: block; }
+.parejas li { margin: 0; }
+.parejas a {
+  display: block; padding: .7rem 1.2rem; border-radius: 1rem;
+  color: #e4e2f5; font-family: var(--font-body); font-weight: 400;
+  font-size: max(1.25rem, 11px); line-height: 1.35; text-transform: none;
+}
+.parejas a:hover, .parejas a:focus-visible { background: var(--purple); color: #fff; }
+.parejas a[aria-current="true"] { font-weight: 700; }
 
 .sumario-list { margin: 2.9rem 0 0 1.4rem; }
 .sumario-list li { margin-bottom: .55rem; position: relative; padding-left: 1.8rem; }
@@ -370,7 +386,6 @@ button { font: inherit; cursor: pointer; border: 0; background: none; }
 }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
-.sidebar-nav a.soon { cursor: pointer; }
 
 .video-play {
   position: absolute; inset: 0; width: 100%; height: 100%;
@@ -459,7 +474,14 @@ button.btn-cta { border: 0; cursor: pointer; }
   .sidebar-section { width: 100%; padding-bottom: 1.5rem; min-height: 0 !important; margin-top: 0 !important; border-radius: 0 0 4rem 0 !important; }
   .sidebar-sumario { padding-top: 0 !important; }
   .toggle { margin-right: 1.4rem; }
-  .sidebar-nav a, .sumario-list a { font-size: 1.1rem; }
+  .sumario-list a { font-size: 1.1rem; }
+  .sidebar-temas { padding-bottom: 1.5rem; }
+  .tema-boton { font-size: 1.4rem; }
+  .parejas { position: static; min-width: 0; max-width: none; margin: .4rem 0 .8rem 2.8rem; border-radius: 1.2rem; box-shadow: none; }
+  .parejas::before { display: none; }
+  .tema-item:hover .parejas, .tema-item:focus-within .parejas { display: none; }
+  .tema-item.abierto .parejas { display: block; }
+  .parejas a { font-size: 1.3rem; }
   .main-content { padding: 1.6rem 1.4rem 4rem; }
   .page-title { font-size: 2.6rem; width: auto; background: none; color: var(--olive); }
   .row, .row--single, .row--double { flex-direction: column; gap: 1.6rem; }
