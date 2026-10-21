@@ -553,16 +553,19 @@ font-family: "Open Sans", Arial, sans-serif;
   color: var(--fondo);
   font-size: 1.05rem;
 }
-.pagina-inicio .site-footer {
+.pagina-inicio .site-footer,
+.pagina-acerca .site-footer {
   grid-template-columns: minmax(0, 1fr);
   position: relative;
 }
 
-.pagina-inicio .footer-copy {
+.pagina-inicio .footer-copy,
+.pagina-acerca .footer-copy {
   grid-column: 1;
 }
 
-.pagina-inicio .logo-pie {
+.pagina-inicio .logo-pie,
+.pagina-acerca .logo-pie {
   position: absolute;
   left: 4.4%;
   top: 50%;
@@ -573,7 +576,8 @@ font-family: "Open Sans", Arial, sans-serif;
   z-index: 1;
 }
 
-.pagina-inicio .logo-pie img {
+.pagina-inicio .logo-pie img,
+.pagina-acerca .logo-pie img {
   display: block;
   width: 100%;
   height: auto;
@@ -587,4 +591,49 @@ font-family: "Open Sans", Arial, sans-serif;
   content: none !important;
   display: none !important;
   background-image: none !important;
+}
+.pagina-acerca .contenido-acerca {
+  min-height: calc(100vh - 78px - 125px);
+  margin-left: 0;
+  display: grid;
+  align-items: center;
+  overflow: visible;
+}
+.pagina-acerca .contenido-acerca::before,
+.pagina-acerca .contenido-acerca::after {
+  content: none;
+  display: none;
+  background-image: none;
+}
+.acerca-layout {
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+.acerca-texto {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 32px;
+  background: var(--gris-claro);
+  color: var(--fondo);
+}
+.acerca-texto h1 {
+  margin: 0 0 1rem;
+  color: var(--oliva);
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  line-height: 1.2;
+}
+.acerca-texto p { margin: 0 0 0.9rem; }
+.acerca-texto p:last-child { margin-bottom: 0; }
+.acerca-logo {
+  display: block;
+  width: min(100%, 420px);
+  justify-self: center;
+}
+@media (max-width: 900px) {
+  .pagina-acerca .contenido-acerca { min-height: auto; }
+  .acerca-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .acerca-logo { width: min(70vw, 320px); }
 }

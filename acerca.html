@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conoce WikiDesign, una wiki académica creada por estudiantes de la UVM para acompañar a quienes comienzan la carrera de Diseño.">
+  <title>Acerca de nosotros | WikiDesign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pagina-acerca">
+<header class="barra-superior">
+  <a class="marca" href="inicio.html" aria-label="WikiDesign, ir al inicio">
+    <img src="assets/logo-principal.png" alt="WikiDesign">
+  </a>
+
+  <nav aria-label="Navegación principal">
+    <a href="inicio.html">Inicio</a>
+    <a href="#">Colabora</a>
+    <a href="acerca.html" aria-current="page">Acerca de nosotros</a>
+  </nav>
+
+  <form class="buscador" role="search" action="#">
+    <label for="buscar">Buscar en la wiki</label>
+    <button type="submit" aria-label="Buscar">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="10.8" cy="10.8" r="6.8"></circle>
+        <path d="m16 16 4.5 4.5"></path>
+      </svg>
+    </button>
+    <input type="search" id="buscar" aria-label="Buscar">
+  </form>
+</header>
+
+<main class="contenido contenido-acerca">
+  <section class="acerca-layout" aria-labelledby="titulo-acerca">
+    <div class="acerca-texto">
+      <h1 id="titulo-acerca">Acerca de WikiDesign</h1>
+      <p>WikiDesign es una wiki académica creada por estudiantes de la Universidad del Valle de México para acompañar a quienes comienzan la carrera de Diseño. Queremos ofrecer un espacio cercano donde puedan encontrar información clara y útil para sus primeros pasos.</p>
+      <p>En sus páginas reunimos temas como diseño web, experiencia de usuario, diseño visual, navegación y otras áreas que forman parte de la disciplina. Cada sección explica conceptos y muestra cómo se aplican al crear sitios y productos digitales.</p>
+      <p>Este proyecto es colaborativo y tiene fines educativos: compartir lo que aprendemos, inspirar nuevas ideas y ayudar a que la comunidad estudiantil construya conocimiento en conjunto.</p>
+    </div>
+    <img class="acerca-logo" src="assets/logo-bienvenida.png" alt="Logotipo de WikiDesign en colores">
+  </section>
+</main>
+
+<footer class="site-footer">
+  <a class="logo-pie" href="inicio.html" aria-label="Volver al inicio de WikiDesign">
+    <img src="assets/logo-legal.png" alt="WikiDesign">
+  </a>
+  <div class="footer-copy">
+    <p class="copyright">© 2026 WikiDesign | Proyecto académico sin fines de lucro.</p>
+    <p>Sitio desarrollado por estudiantes de diferentes licenciaturas de la Universidad del Valle de México (UVM) con fines educativos y sin propósitos comerciales. Este proyecto es independiente y no representa oficialmente a la UVM. Los derechos de los recursos de terceros pertenecen a sus respectivos titulares.</p>
+  </div>
+</footer>
+</body>
+</html>
